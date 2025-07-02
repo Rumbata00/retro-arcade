@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Arcade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #14151f;
+        }
+        #gameCanvas {
+            border: 2px solid #3B82F6;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        .game-container {
+            transition: all .3s ease;
+        }
+        .game-overlay {
+            background-color: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(5px);
+        }
+        .control-btn {
+            transition: all 0.2s ease;
+        }
+        .control-btn:hover {
+            transform: scale(1.05);
+        }
+        h3 {text-align: center;}
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center text-white">
+    <div class="text-center mb-8">
+        <h1 class="text-4xl font-bold mb-2 text-blue-200">Retro Arcade</h1>
+        <p class="text-gray-300">Beat the boredom!</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 px-4">
+        <a href="snake.html" class="game-card bg-gray-800 rounded-lg p-4 shadow-lg hover:shadow-blue-500/50 transition-all block">
+        <h3 class="text-xl font-bold text-blue-200 mb-2">Snake</h3>
+        <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded mb-3 overflow-hidden">
+            <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1846f8a9-819b-4cd3-8ff1-807ae3358a36.png" alt="Snake Game" class="w-full h-full object-cover">
+        </div>
+        <p class="text-gray-300 text-sm">Classic snake game with touch controls</p>
+    </a>
+        <!-- More game cards would go here -->
+    </div>
+</body>
+</html>
+
