@@ -18,9 +18,12 @@
     button:active { opacity: 0.8; }
 
     .controls {
-      display: grid; grid-template-columns: 0.5fr 1fr 1fr 1fr 0.5fr;
-      align-items: center; justify-content: center;
-      margin-top: 1.5em; gap: 1em; color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 1.5em;
+      gap: 0.5em;
+      color: white;
     }
 
     .drop-container { display: flex; justify-content: center; }
@@ -43,8 +46,8 @@
       background-color: rgba(255,255,255,0.1); border-radius: 0.2em;
       width: 0.8em; height: 0.8em; position: relative;
     }
-    .drop label .box::after {
-      content: "auto"; font-size: 0.6em; position: absolute;
+    .drop label::after {
+      content: "auto"; font-size: 0.7em; position: absolute;
       left: calc(100% + 0.4em); color: white;
     }
     .drop label svg {
@@ -52,18 +55,18 @@
       transform: translate(-50%, -50%);
     }
 
-    #balls, #multiplier {
-      font-weight: 900; font-size: 2.2em;
-      color: rgba(255,255,255,0.2);
+    #balls {
+      font-weight: 900; 
+      font-size: 2.5em;
+      color: rgba(255,255,255,0.7);
     }
     #balls::before {
-      content: "Balls"; font-size: 0.3em; position: absolute;
-      bottom: 100%; left: 0; font-weight: 400;
-    }
-    #multiplier { text-align: right; }
-    #multiplier::before {
-      content: "Drop"; font-size: 0.3em; position: absolute;
-      bottom: 100%; right: 0; font-weight: 400;
+      content: "Balls"; 
+      font-size: 0.4em; 
+      position: relative;
+      display: block;
+      text-align: center;
+      font-weight: 400;
     }
 
     .canvas-container { display: flex; justify-content: center; align-items: center; }
@@ -105,8 +108,7 @@
 <body>
 
   <div class="controls">
-    <div></div>
-    <div><div id="balls">-</div></div>
+    <div id="balls">-</div>
     <div class="drop-container">
       <div class="drop">
         <button id="drop-button">Drop</button>
@@ -120,8 +122,6 @@
         </label>
       </div>
     </div>
-    <div><div id="multiplier">1</div></div>
-    <div></div>
   </div>
 
   <div class="canvas-container"><canvas id="canvas" width="620" height="534"></canvas></div>
@@ -191,7 +191,7 @@
     function dropBall() {
       if (balls <= 0) return;
       balls--;
-      document.getElementById("balls").textContent = balls;
+      document.getElementById("balls").textContent = balls; // Update display immediately after decrementing
       const x = width / 2 + (Math.random() - 0.5) * GAP * 2;
       const ball = Bodies.circle(x, 0, BALL_RAD, {
         restitution: 0.6, label: "Ball", render: { fillStyle: "#f23" }
@@ -231,6 +231,7 @@
           const index = Math.floor((ball.position.x - width / 2) / GAP + 17 / 2);
           if (index >= 0 && index < multipliers.length) {
             balls += multipliers[index];
+            document.getElementById("balls").textContent = balls; // Update display here
             tones[index]();
             document.getElementById(`note-${index}`).dataset.pressed = true;
             setTimeout(() => {
