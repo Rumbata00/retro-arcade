@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Критерии за оценяване - Програмиране</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            color: #333;
+            background-color: #fff;
+        }
+        
+        h1 {
+            color: #2c3e50;
+            text-align: center;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #34495e;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #3498db;
+        }
+        
+        h3 {
+            color: #2c3e50;
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        
+        .criterion {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 5px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .criterion-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .requirements {
+            background-color: #fff;
+            border-left: 4px solid #27ae60;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        
+        .requirements h4 {
+            color: #27ae60;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            padding-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .important {
+            background-color: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .bonus {
+            background-color: #d1ecf1;
+            border: 1px solid #bee5eb;
+            border-radius: 4px;
+            padding: 10px;
+            margin: 10px 0;
+        }
+        
+        .bonus::before {
+            content: "⭐ ";
+            font-weight: bold;
+        }
+        
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #dee2e6;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Критерии за оценяване - Програмиране</h1>
+    
+    <div class="criterion">
+        <div class="criterion-title">1. GitHub Repository с публичен достъп и регулярни къмити</div>
+        <div class="description">
+            Проектът трябва да бъде хостван в публично GitHub repository с активно участие от всички членове на екипа.
+        </div>
+        <div class="requirements">
+            <h4>Изисквания:</h4>
+            <ul>
+                <li>Публично достъпно GitHub repository</li>
+                <li>Регулярни къмити (commits) от всички програмисти в екипа</li>
+                <li>Описателни commit съобщения</li>
+                <li>Правилно използване на branches за различни функционалности</li>
+                <li>README файл с описание на проекта и инструкции за инсталация</li>
+            </ul>
+        </div>
+        <div class="important">
+            <strong>Важно:</strong> Всички членове на екипа трябва да имат видими приноси в историята на къмитите.
+        </div>
+    </div>
+
+    <div class="criterion">
+        <div class="criterion-title">2. Правилна софтуерна архитектура и добри практики</div>
+        <div class="description">
+            Кодът трябва да следва установени стандарти и добри практики в програмирането, осигурявайки поддържимост и разширяемост.
+        </div>
+        <div class="requirements">
+            <h4>Изисквания:</h4>
+            <ul>
+                <li>Модулна архитектура с ясно разделение на отговорностите</li>
+                <li>Използване на подходящи design patterns</li>
+                <li>Спазване на SOLID принципите</li>
+                <li>Правилна организация на файловете и директориите</li>
+                <li>Използване на подходящи библиотеки и frameworks</li>
+                <li>Конфигурационни файлове за различни среди (development, production)</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="criterion">
+        <div class="criterion-title">3. Дизайн на база данни</div>
+        <div class="description">
+            Правилно проектиране на базата данни с оптимални таблици и връзки между тях.
+        </div>
+        <div class="requirements">
+            <h4>Изисквания:</h4>
+            <ul>
+                <li>Нормализирана база данни (поне до 3NF)</li>
+                <li>Правилни връзки между таблиците (foreign keys)</li>
+                <li>Подходящи типове данни за всяко поле</li>
+                <li>Индекси за оптимизация на заявките</li>
+                <li>Constraints за осигуряване на интегритета на данните</li>
+                <li>ER диаграма или схема на базата данни</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="criterion">
+        <div class="criterion-title">4. Качествен код</div>
+        <div class="description">
+            Кодът трябва да бъде четлив, добре структуриран и да следва конвенциите на използвания език.
+        </div>
+        <div class="requirements">
+            <h4>Изисквания:</h4>
+            <ul>
+                <li>Подходящо именуване на променливи, функции и класове</li>
+                <li>Консистентно форматиране и стил</li>
+                <li>Коментари за сложни части от кода</li>
+                <li>Избягване на code duplication (DRY принцип)</li>
+                <li>Правилно управление на грешки</li>
+                <li>Използване на linting tools</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="criterion">
+        <div class="criterion-title">5. Добро взаимодействие с потребителя (UX/UI)</div>
+        <div class="description">
+            Приложението трябва да предоставя интуитивен и приятен потребителски интерфейс.
+        </div>
+        <div class="requirements">
+            <h4>Изисквания:</h4>
+            <ul>
+                <li>Интуитивен и лесен за използване интерфейс</li>
+                <li>Responsive дизайн за различни устройства</li>
+                <li>Бързо време за зареждане</li>
+                <li>Ясни съобщения за грешки и успех</li>
+                <li>Accessibility стандарти</li>
+                <li>Консистентен дизайн през цялото приложение</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="criterion">
+        <div class="criterion-title">6. Цялостност и завършеност на проекта</div>
+        <div class="description">
+            Проектът трябва да бъде напълно функционален и готов за използване.
+        </div>
+        <div class="requirements">
+            <h4>Изисквания:</h4>
+            <ul>
+                <li>Всички планирани функционалности са имплементирани</li>
+                <li>Няма критични бъгове</li>
+                <li>Приложението работи стабилно</li>
+                <li>Документация за потребителите</li>
+                <li>Инструкции за инсталация и настройка</li>
+                <li>Демонстрация на основните функционалности</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="criterion">
+        <div class="criterion-title">7. Адекватна обработка на грешки</div>
+        <div class="description">
+            Приложението трябва да обработва грешки по подходящ начин без да се срива.
+        </div>
+        <div class="requirements">
+            <h4>Изисквания:</h4>
+            <ul>
+                <li>Try-catch блокове за критични операции</li>
+                <li>Валидация на входни данни</li>
+                <li>Информативни съобщения за грешки</li>
+                <li>Логване на грешки за debugging</li>
+                <li>Graceful degradation при проблеми</li>
+                <li>Backup стратегии за критични операции</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="criterion">
+        <div class="criterion-title">8. Качен сайт онлайн</div>
+        <div class="description">
+            Проектът трябва да бъде достъпен онлайн за тестване и демонстрация.
+        </div>
+        <div class="requirements">
+            <h4>Изисквания:</h4>
+            <ul>
+                <li>Работещ онлайн сайт/приложение</li>
+                <li>Стабилен хостинг</li>
+                <li>HTTPS сертификат (препоръчително)</li>
+                <li>Правилна конфигурация на сървъра</li>
+                <li>Backup и recovery план</li>
+                <li>Мониторинг на производителността</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="criterion">
+        <div class="criterion-title bonus">9. Unit Tests (Бонус критерий)</div>
+        <div class="description">
+            Автоматизирани тестове за проверка на функционалността на кода.
+        </div>
+        <div class="requirements">
+            <h4>Изисквания:</h4>
+            <ul>
+                <li>Unit tests за основните функции</li>
+                <li>Test coverage поне 70%</li>
+                <li>Integration tests за критични workflow-ове</li>
+                <li>Automated testing в CI/CD pipeline</li>
+                <li>Mocking на външни зависимости</li>
+                <li>Performance tests (по желание)</li>
+            </ul>
+        </div>
+        <div class="bonus">
+            Този критерий носи допълнителни точки и показва високо ниво на професионализъм в разработката.
+        </div>
+    </div>
+
+    <h2>Обща информация за оценяването</h2>
+    
+    <div class="important">
+        <h3>Важни бележки:</h3>
+        <ul>
+            <li>Всички критерии са задължителни, освен Unit Tests който е бонус</li>
+            <li>Качеството е по-важно от количеството функционалности</li>
+            <li>Екипната работа и приносът на всеки член се оценяват отделно</li>
+            <li>Препоръчва се редовна комуникация с преподавателя по време на разработката</li>
+        </ul>
+    </div>
+
+    <h3>Препоръчани технологии и инструменти:</h3>
+    <ul>
+        <li><strong>Version Control:</strong> Git, GitHub</li>
+        <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript, React/Vue/Angular</li>
+        <li><strong>Backend:</strong> Node.js, Python, Java, C#</li>
+        <li><strong>Database:</strong> MySQL, PostgreSQL, MongoDB</li>
+        <li><strong>Testing:</strong> Jest, Mocha, JUnit, NUnit</li>
+        <li><strong>Deployment:</strong> Heroku, Netlify, Vercel, AWS</li>
+    </ul>
+
+    <div class="footer">
+        <p>Този документ служи като ръководство за оценяване на програмни проекти.</p>
+        <p>За допълнителни въпроси се обърнете към преподавателя.</p>
+    </div>
+</body>
+</html>
